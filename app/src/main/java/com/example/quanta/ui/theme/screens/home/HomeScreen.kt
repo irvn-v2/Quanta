@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -20,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
@@ -36,29 +38,28 @@ fun HomeScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Red),
+            .background(Color.White),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
-            painter = painterResource(id = com.example.quanta.R.drawable.home),
+            painter = painterResource(id = com.example.quanta.R.drawable.img_2),
             contentDescription = "home",
             modifier = Modifier
-                .size(300.dp)
-                .clip(shape = CircleShape),
+                .size(350.dp)
+                .clip(shape = RectangleShape),
             contentScale = ContentScale.Crop
         )
 
         Text(
-            text = "MagicBricks",
+            text = "QUANTA",
             fontSize = 60.sp,
-            fontFamily = FontFamily.Cursive,
-            color = Color.Magenta,
+            color = Color.Red,
 
             )
 
         Text(
-            text = "Your better choice",
+            text = "Your online shopping choice",
             fontSize = 20.sp,
         )
 
@@ -69,9 +70,10 @@ fun HomeScreen(navController: NavController) {
              onClick = { navController.navigate(ROUT_ABOUT) },
 
              modifier = Modifier
-                 .height(50.dp)
+                 .height(70.dp)
+                 .width(300.dp)
                  .padding(start = 20.dp, end = 20.dp),
-             colors = ButtonDefaults.buttonColors(Color.Magenta),
+             colors = ButtonDefaults.buttonColors(Color.Red),
              shape = RoundedCornerShape(10.dp)
           ){
               Text(text = "Get Started")

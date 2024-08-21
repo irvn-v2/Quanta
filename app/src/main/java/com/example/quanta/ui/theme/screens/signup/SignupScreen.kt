@@ -36,6 +36,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -48,19 +49,16 @@ import com.example.quanta.navigation.ROUT_LOGIN
 @Composable
 fun SignupScreen(navController: NavController){
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .paint(painterResource(id = R.drawable.img_1),
-        contentScale = ContentScale.FillBounds
-        ),
+    Column(modifier = Modifier
+        .fillMaxSize(),
+
 
         horizontalAlignment = Alignment.CenterHorizontally) {
 
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(30.dp))
 
         Image(
-            painter = painterResource(id = com.example.quanta.R.drawable.img),
+            painter = painterResource(id = com.example.quanta.R.drawable.img_2),
             contentDescription = "home",
             modifier = Modifier.size(200.dp)
         )
@@ -68,10 +66,9 @@ fun SignupScreen(navController: NavController){
         Spacer(modifier = Modifier.height(20.dp))
 
         Text(
-            text = "MagicBricks",
+            text = "Quanta",
             fontSize = 60.sp,
-            fontFamily = FontFamily.Cursive,
-            color = Color.Black
+            color = Color.Red
         )
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -146,7 +143,7 @@ fun SignupScreen(navController: NavController){
                 .fillMaxWidth()
                 .height(50.dp)
                 .padding(start = 20.dp, end = 20.dp),
-            colors = ButtonDefaults.buttonColors(Color.Magenta),
+            colors = ButtonDefaults.buttonColors(Color.Red),
             shape = RoundedCornerShape(10.dp)
         ){
             Text(text = "CREATE AN ACCOUNT")
@@ -156,9 +153,9 @@ fun SignupScreen(navController: NavController){
 
         Text(
             text = "Already have an account? Login",
-            fontSize = 30.sp,
-            fontFamily = FontFamily.Cursive,
+            fontSize = 20.sp,
             fontWeight = FontWeight.ExtraBold,
+            textAlign = TextAlign.Center,
             color = Color.Black,
             modifier = Modifier.clickable {navController.navigate(ROUT_LOGIN)}
         )

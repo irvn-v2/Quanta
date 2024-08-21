@@ -33,6 +33,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -52,19 +53,19 @@ fun LoginScreen(navController: NavController){
         Spacer(modifier = Modifier.height(40.dp))
 
         Image(
-            painter = painterResource(id = com.example.quanta.R.drawable.img),
+            painter = painterResource(id = com.example.quanta.R.drawable.img_2),
             contentDescription = "home",
             modifier = Modifier.size(200.dp)
         )
 
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(30.dp))
 
         Text(
             text = "Welcome back!",
-            fontSize = 60.sp,
-            fontFamily = FontFamily.Cursive,
+            textAlign = TextAlign.Center,
+            fontSize = 45.sp,
             fontWeight = FontWeight.ExtraBold,
-            color = Color.Magenta
+            color = Color.Red
         )
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -113,7 +114,7 @@ fun LoginScreen(navController: NavController){
                 .fillMaxWidth()
                 .height(50.dp)
                 .padding(start = 20.dp, end = 20.dp),
-            colors = ButtonDefaults.buttonColors(Color.Magenta),
+            colors = ButtonDefaults.buttonColors(Color.Red),
             shape = RoundedCornerShape(10.dp)
         ){
             Text(text = "LOGIN")
@@ -123,14 +124,12 @@ fun LoginScreen(navController: NavController){
 
         Text(
             text = "Don't have an account? Sign up",
-            fontSize = 30.sp,
-            fontFamily = FontFamily.Cursive,
+            fontSize = 20.sp,
+            textAlign = TextAlign.Center,
             fontWeight = FontWeight.ExtraBold,
             color = Color.Black,
             modifier = Modifier.clickable {navController.navigate(ROUT_SIGNUP)}
         )
-
-
 
     }
 }
