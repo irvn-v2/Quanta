@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "224181444141",
+    "project_id": "quanta-ae26b",
+    "storage_bucket": "quanta-ae26b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224181444141:android:be36bf5db8072abc23a2a4",
+        "android_client_info": {
+          "package_name": "com.example.quanta"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNebDmsWMCsxJ0mRBL-MsQ_IEP9mikrhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
