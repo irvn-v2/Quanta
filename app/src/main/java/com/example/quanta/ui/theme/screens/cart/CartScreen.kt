@@ -1,7 +1,8 @@
-package com.example.quanta.ui.theme.screens.about
+package com.example.quanta.ui.theme.screens.cart
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.Person
@@ -23,17 +24,19 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.quanta.ui.theme.screens.about.bottomNavItems
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AboutScreen(navController: NavController){
-    Column {
+fun CartScreen(navController: NavController){
+    Column (modifier = Modifier.fillMaxSize()){
         var selected by remember { mutableIntStateOf(0) }
         Scaffold(
             bottomBar = {
@@ -84,8 +87,8 @@ val bottomNavItems = listOf(
     BottomNavItem(
         title = "Menu",
         route="menu",
-        selectedIcon=Icons.Outlined.Menu,
-        unselectedIcon=Icons.Outlined.Menu,
+        selectedIcon= Icons.Outlined.Menu,
+        unselectedIcon= Icons.Outlined.Menu,
         hasNews = false,
         badges=0
     ),
@@ -95,17 +98,17 @@ val bottomNavItems = listOf(
     BottomNavItem(
         title = "Cart",
         route="cart",
-        selectedIcon=Icons.Filled.ShoppingCart,
-        unselectedIcon=Icons.Outlined.ShoppingCart,
-        hasNews = true,
+        selectedIcon= Icons.Filled.ShoppingCart,
+        unselectedIcon= Icons.Outlined.ShoppingCart,
+        hasNews = false,
         badges=0
     ),
 
     BottomNavItem(
         title = "Contact Us",
         route="contact",
-        selectedIcon=Icons.Filled.Call,
-        unselectedIcon=Icons.Outlined.Call,
+        selectedIcon= Icons.Filled.Call,
+        unselectedIcon= Icons.Outlined.Call,
         hasNews = true,
         badges=0
     ),
@@ -113,8 +116,8 @@ val bottomNavItems = listOf(
     BottomNavItem(
         title = "Account",
         route="account",
-        selectedIcon=Icons.Filled.Person,
-        unselectedIcon=Icons.Outlined.Person,
+        selectedIcon= Icons.Filled.Person,
+        unselectedIcon= Icons.Outlined.Person,
         hasNews = true,
         badges=0
     ),
@@ -135,18 +138,6 @@ data class BottomNavItem(
 
 @Composable
 @Preview(showBackground = true)
-fun AboutScreenPreview(){
-    AboutScreen(rememberNavController())
+fun CartScreenPreview(){
+    CartScreen(rememberNavController())
 }
-
-
-
-
-
-
-
-
-
-
-
-

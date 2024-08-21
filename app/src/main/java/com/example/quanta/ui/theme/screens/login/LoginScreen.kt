@@ -40,6 +40,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.quanta.data.AuthViewModel
+import com.example.quanta.navigation.ROUT_HOME
 import com.example.quanta.navigation.ROUT_SIGNUP
 
 @Composable
