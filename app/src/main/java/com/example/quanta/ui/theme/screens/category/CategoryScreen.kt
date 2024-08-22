@@ -1,24 +1,29 @@
-package com.example.quanta.ui.theme.screens.cart
+package com.example.quanta.ui.theme.screens.category
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Call
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material.icons.outlined.Call
 import androidx.compose.material.icons.outlined.Menu
-import androidx.compose.material.icons.outlined.Person
-import androidx.compose.material.icons.outlined.ShoppingCart
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -26,17 +31,20 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.core.net.toUri
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.example.quanta.ui.theme.screens.about.bottomNavItems
+import com.example.quanta.ui.theme.screens.menu.BottomNavItem
+import com.example.quanta.ui.theme.screens.menu.bottomNavItems
 
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun CartScreen(navController: NavController){
-    Column (modifier = Modifier.fillMaxSize()){
+fun CategoryScreen(navController: NavController){
+    Column {
         var selected by remember { mutableIntStateOf(0) }
         Scaffold(
             bottomBar = {
@@ -78,8 +86,26 @@ fun CartScreen(navController: NavController){
                     }
                 }
 
+            },
+            topBar = {
+                TopAppBar(
+                    title = {
+                        Text(
+                            text = "QUANTA",
+                            color = Color.White
+                        )
+                    },
+                    colors = TopAppBarDefaults.mediumTopAppBarColors(Color.Red),
+                )
+            },
+
+            content = @Composable{
+                Column {
+
+                }
+
             }
-        ){}
+        )
     }
 }
 
@@ -93,19 +119,8 @@ val bottomNavItems = listOf(
         badges=0
     ),
 
-
-
     BottomNavItem(
-        title = "Cart",
-        route="cart",
-        selectedIcon= Icons.Filled.ShoppingCart,
-        unselectedIcon= Icons.Outlined.ShoppingCart,
-        hasNews = false,
-        badges=0
-    ),
-
-    BottomNavItem(
-        title = "Contact Us",
+        title = "Contact us",
         route="contact",
         selectedIcon= Icons.Filled.Call,
         unselectedIcon= Icons.Outlined.Call,
@@ -113,31 +128,10 @@ val bottomNavItems = listOf(
         badges=0
     ),
 
-    BottomNavItem(
-        title = "Account",
-        route="account",
-        selectedIcon= Icons.Filled.Person,
-        unselectedIcon= Icons.Outlined.Person,
-        hasNews = true,
-        badges=0
-    ),
-
-
     )
-
-
-
-data class BottomNavItem(
-    val title :String,
-    val route :String,
-    val selectedIcon: ImageVector,
-    val unselectedIcon : ImageVector,
-    val hasNews :Boolean,
-    val badges :Int
-)
 
 @Composable
 @Preview(showBackground = true)
-fun CartScreenPreview(){
-    CartScreen(rememberNavController())
+fun CategoryScreenPreview(){
+    CategoryScreen(rememberNavController())
 }

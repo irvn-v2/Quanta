@@ -42,10 +42,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.example.quanta.R
 import com.example.quanta.data.AuthViewModel
-import com.example.quanta.navigation.ROUT_ABOUT
-import com.example.quanta.navigation.ROUT_HOME
 import com.example.quanta.navigation.ROUT_LOGIN
 
 @Composable
@@ -60,7 +57,7 @@ fun SignupScreen(navController: NavController){
         Spacer(modifier = Modifier.height(30.dp))
 
         Image(
-            painter = painterResource(id = com.example.quanta.R.drawable.img_2),
+            painter = painterResource(id = com.example.quanta.R.drawable.img_5),
             contentDescription = "home",
             modifier = Modifier.size(200.dp)
         )
@@ -68,7 +65,7 @@ fun SignupScreen(navController: NavController){
         Spacer(modifier = Modifier.height(20.dp))
 
         Text(
-            text = "Quanta",
+            text = "QUANTA",
             fontSize = 60.sp,
             color = Color.Red
         )

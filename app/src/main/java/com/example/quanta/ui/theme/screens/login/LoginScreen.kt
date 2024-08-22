@@ -54,7 +54,7 @@ fun LoginScreen(navController: NavController){
         Spacer(modifier = Modifier.height(40.dp))
 
         Image(
-            painter = painterResource(id = com.example.quanta.R.drawable.img_2),
+            painter = painterResource(id = com.example.quanta.R.drawable.img_5),
             contentDescription = "home",
             modifier = Modifier.size(200.dp)
         )

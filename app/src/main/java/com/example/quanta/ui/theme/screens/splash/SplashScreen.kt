@@ -44,7 +44,7 @@ fun SplashScreen(navController: NavController){
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
-            painter = painterResource(id = com.example.quanta.R.drawable.img_3),
+            painter = painterResource(id = com.example.quanta.R.drawable.img_5),
             contentDescription = "splash",
             modifier = Modifier
                 .size(150.dp)

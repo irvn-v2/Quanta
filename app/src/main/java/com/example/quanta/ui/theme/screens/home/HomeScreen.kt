@@ -24,13 +24,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.example.quanta.navigation.ROUT_ABOUT
+import com.example.quanta.navigation.ROUT_MENU
 
 
 @Composable
@@ -43,7 +42,7 @@ fun HomeScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
-            painter = painterResource(id = com.example.quanta.R.drawable.img_2),
+            painter = painterResource(id = com.example.quanta.R.drawable.img_5),
             contentDescription = "home",
             modifier = Modifier
                 .size(350.dp)
@@ -59,7 +58,7 @@ fun HomeScreen(navController: NavController) {
             )
 
         Text(
-            text = "Your online shopping choice",
+            text = "Where cars meet their owners",
             fontSize = 20.sp,
         )
 
@@ -67,7 +66,7 @@ fun HomeScreen(navController: NavController) {
          Spacer(modifier = Modifier.height(60.dp))
 
           Button(
-             onClick = { navController.navigate(ROUT_ABOUT) },
+             onClick = { navController.navigate(ROUT_MENU) },
 
              modifier = Modifier
                  .height(70.dp)

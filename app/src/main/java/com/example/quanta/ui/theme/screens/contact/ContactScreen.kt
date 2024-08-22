@@ -2,7 +2,6 @@ package com.example.quanta.ui.theme.screens.contact
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.Person
@@ -13,7 +12,6 @@ import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.ShoppingCart
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -24,19 +22,17 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.example.quanta.ui.theme.screens.about.bottomNavItems
+import com.example.quanta.ui.theme.screens.menu.bottomNavItems
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ContactScreen(navController: NavController){
-    Column (modifier = Modifier.fillMaxSize()){
+    Column {
         var selected by remember { mutableIntStateOf(0) }
         Scaffold(
             bottomBar = {
@@ -80,7 +76,6 @@ fun ContactScreen(navController: NavController){
 
             }
         ){}
-
     }
 }
 
@@ -110,7 +105,7 @@ val bottomNavItems = listOf(
         route="contact",
         selectedIcon= Icons.Filled.Call,
         unselectedIcon= Icons.Outlined.Call,
-        hasNews = false,
+        hasNews = true,
         badges=0
     ),
 
