@@ -8,10 +8,13 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.quanta.ui.theme.screens.category.CategoryScreen
 import com.example.quanta.ui.theme.screens.contact.ContactScreen
+import com.example.quanta.ui.theme.screens.cruiser.CruiserScreen
 import com.example.quanta.ui.theme.screens.home.HomeScreen
 import com.example.quanta.ui.theme.screens.login.LoginScreen
 import com.example.quanta.ui.theme.screens.menu.MenuScreen
 import com.example.quanta.ui.theme.screens.notification.NotificationScreen
+import com.example.quanta.ui.theme.screens.porsche.PorscheScreen
+import com.example.quanta.ui.theme.screens.rover.RoverScreen
 import com.example.quanta.ui.theme.screens.signup.SignupScreen
 import com.example.quanta.ui.theme.screens.splash.SplashScreen
 
@@ -61,6 +64,17 @@ fun AppNavHost(
             ContactScreen(navController = navController)
         }
 
+        composable(ROUT_CRUISER) {
+            CruiserScreen(navController = navController)
+        }
+
+        composable(ROUT_ROVER) {
+            RoverScreen(navController = navController)
+        }
+
+        composable(ROUT_PORSCHE) {
+            PorscheScreen(navController = navController)
+        }
     }
 
 }

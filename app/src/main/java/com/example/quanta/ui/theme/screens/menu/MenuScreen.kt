@@ -3,6 +3,7 @@ package com.example.quanta.ui.theme.screens.menu
 import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -68,7 +69,10 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.quanta.R
 import com.example.quanta.navigation.ROUT_CATEGORY
+import com.example.quanta.navigation.ROUT_CRUISER
 import com.example.quanta.navigation.ROUT_NOTIFICATION
+import com.example.quanta.navigation.ROUT_PORSCHE
+import com.example.quanta.navigation.ROUT_ROVER
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
@@ -145,13 +149,9 @@ fun MenuScreen(navController: NavController){
                                 contentDescription = "notification",
                                 tint = Color.White
                             )
-
                         }
                     },
-
-
                 )
-
             },
 
             content = @Composable {
@@ -187,6 +187,7 @@ fun MenuScreen(navController: NavController){
                                 modifier = Modifier
                                     .height(200.dp)
                                     .width(200.dp)
+                                    .clickable {navController.navigate(ROUT_CRUISER)}
                             ){
                                 Box (
                                     modifier = Modifier
@@ -207,7 +208,8 @@ fun MenuScreen(navController: NavController){
                                 modifier = Modifier
                                     .height(200.dp)
                                     .width(200.dp)
-                                    .verticalScroll(rememberScrollState()),
+                                    .verticalScroll(rememberScrollState())
+                                    .clickable {navController.navigate(ROUT_CRUISER)},
                                 colors = CardDefaults.cardColors(Color.White)
                             ){
                                 Text(
@@ -231,32 +233,20 @@ fun MenuScreen(navController: NavController){
                                 Spacer(modifier = Modifier.height(20.dp))
 
                                 Text(
-                                    text = "The Toyota Land Cruiser LC300 is a rugged, full-size SUV known for its off-road capability and durability. It features a robust design, advanced safety technologies, and a powerful engine lineup, making it suitable for both challenging terrains and everyday driving.",
+                                    text = "The Toyota Land Cruiser LC300 is a rugged, full-size SUV known for its off-road capability and durability.",
                                     color = Color.Black,
                                     fontSize = 15.sp,
                                     modifier = Modifier
                                         .padding(start = 10.dp)
                                 )
 
-                                Button(
-                                    onClick = {
-                                        val callIntent=Intent(Intent.ACTION_DIAL)
-                                        callIntent.data="tel:0741512929".toUri()
-                                        mContext.startActivity(callIntent)
-                                    },
-                                    colors = ButtonDefaults.buttonColors(Color.Red),
-                                    shape = RoundedCornerShape(10.dp),
-                                    modifier = Modifier
-                                        .padding(start = 35.dp, top = 25.dp)
-                                ) {
-                                    Text(text = "Order Now")
-                                }
                             }
 
                             Card (
                                 modifier = Modifier
                                     .height(200.dp)
                                     .width(200.dp)
+                                    .clickable {navController.navigate(ROUT_ROVER)}
                             ){
                                 Box (
                                     modifier = Modifier
@@ -276,6 +266,7 @@ fun MenuScreen(navController: NavController){
                                 modifier = Modifier
                                     .height(200.dp)
                                     .width(200.dp)
+                                    .clickable {navController.navigate(ROUT_ROVER)}
                                     .verticalScroll(rememberScrollState()),
                                 colors = CardDefaults.cardColors(Color.White)
                             ){
@@ -301,31 +292,19 @@ fun MenuScreen(navController: NavController){
 
 
                                 Text(
-                                    text = "The Range Rover SV is a high-performance, luxury SUV with a focus on advanced technology, premium materials, and exceptional comfort. It offers powerful engine options, sophisticated design, and advanced off-road capabilities.",
+                                    text = "The Range Rover SV is a high-performance, luxury SUV with a focus on advanced technology, premium materials, and exceptional comfort.",
                                     color = Color.Black,
                                     fontSize = 15.sp,
                                     modifier = Modifier
                                         .padding(start = 10.dp)
                                 )
 
-                                Button(
-                                    onClick = {
-                                        val callIntent=Intent(Intent.ACTION_DIAL)
-                                        callIntent.data="tel:0741512929".toUri()
-                                        mContext.startActivity(callIntent)
-                                    },
-                                    colors = ButtonDefaults.buttonColors(Color.Red),
-                                    shape = RoundedCornerShape(10.dp),
-                                    modifier = Modifier
-                                        .padding(start = 35.dp, top = 25.dp)
-                                ) {
-                                    Text(text = "Order Now")
-                                }
                             }
                             Card (
                                 modifier = Modifier
                                     .height(200.dp)
                                     .width(200.dp)
+                                    .clickable {navController.navigate(ROUT_PORSCHE)}
                             ){
                                 Box (
                                     modifier = Modifier
@@ -345,6 +324,7 @@ fun MenuScreen(navController: NavController){
                                 modifier = Modifier
                                     .height(200.dp)
                                     .width(200.dp)
+                                    .clickable {navController.navigate(ROUT_PORSCHE)}
                                     .verticalScroll(rememberScrollState()),
                                 colors = CardDefaults.cardColors(Color.White)
                             ) {
@@ -370,26 +350,12 @@ fun MenuScreen(navController: NavController){
 
 
                                 Text(
-                                    text = "The Porsche 911 GT3 RS is a high-performance sports car featuring a 4.0-liter flat-six engine. It is engineered for exceptional track performance, offering precise handling, advanced aerodynamics, and lightweight materials for an exhilarating driving experience.",
+                                    text = "The Porsche 911 GT3 RS is a high-performance sports car featuring a 4.0-liter flat-six engine.",
                                     color = Color.Black,
                                     fontSize = 15.sp,
                                     modifier = Modifier
                                         .padding(start = 10.dp)
                                 )
-
-                                Button(
-                                    onClick = {
-                                        val callIntent = Intent(Intent.ACTION_DIAL)
-                                        callIntent.data = "tel:0741512929".toUri()
-                                        mContext.startActivity(callIntent)
-                                    },
-                                    colors = ButtonDefaults.buttonColors(Color.Red),
-                                    shape = RoundedCornerShape(10.dp),
-                                    modifier = Modifier
-                                        .padding(start = 35.dp, top = 25.dp)
-                                ) {
-                                    Text(text = "Order Now")
-                                }
                             }
                         }
                         //End of row1
@@ -450,26 +416,12 @@ fun MenuScreen(navController: NavController){
                                 Spacer(modifier = Modifier.height(20.dp))
 
                                 Text(
-                                    text = "The Tesla Cybertruck is a futuristic electric pickup with a distinctive angular design. It features a durable exoskeleton, a spacious interior with advanced technology, and impressive performance specs, including long range and rapid acceleration.",
+                                    text = "The Tesla Cybertruck is a futuristic electric pickup with a distinctive angular design.",
                                     color = Color.Black,
                                     fontSize = 15.sp,
                                     modifier = Modifier
                                         .padding(start = 10.dp)
                                 )
-
-                                Button(
-                                    onClick = {
-                                        val callIntent=Intent(Intent.ACTION_DIAL)
-                                        callIntent.data="tel:0741512929".toUri()
-                                        mContext.startActivity(callIntent)
-                                    },
-                                    colors = ButtonDefaults.buttonColors(Color.Red),
-                                    shape = RoundedCornerShape(10.dp),
-                                    modifier = Modifier
-                                        .padding(start = 35.dp, top = 25.dp)
-                                ) {
-                                    Text(text = "Order Now")
-                                }
                             }
 
                             Card (
@@ -520,26 +472,12 @@ fun MenuScreen(navController: NavController){
 
 
                                 Text(
-                                    text = "The BMW M3 is a high-performance sports sedan known for its powerful engine, precise handling, and dynamic driving experience. It combines luxury and advanced technology with track-ready performance.",
+                                    text = "The BMW M3 is a high-performance sports sedan known for its powerful engine, precise handling, and dynamic driving experience.",
                                     color = Color.Black,
                                     fontSize = 15.sp,
                                     modifier = Modifier
                                         .padding(start = 10.dp)
                                 )
-
-                                Button(
-                                    onClick = {
-                                        val callIntent=Intent(Intent.ACTION_DIAL)
-                                        callIntent.data="tel:0741512929".toUri()
-                                        mContext.startActivity(callIntent)
-                                    },
-                                    colors = ButtonDefaults.buttonColors(Color.Red),
-                                    shape = RoundedCornerShape(10.dp),
-                                    modifier = Modifier
-                                        .padding(start = 35.dp, top = 25.dp)
-                                ) {
-                                    Text(text = "Order Now")
-                                }
                             }
                             Card (
                                 modifier = Modifier
@@ -589,26 +527,12 @@ fun MenuScreen(navController: NavController){
 
 
                                 Text(
-                                    text = "The Land Rover Defender is a rugged and versatile SUV designed for off-road capability and durability. It combines a classic, tough exterior with modern technology and comfort features, making it suitable for both challenging terrains and everyday use.",
+                                    text = "The Land Rover Defender is a rugged and versatile SUV designed for off-road capability and durability.",
                                     color = Color.Black,
                                     fontSize = 15.sp,
                                     modifier = Modifier
                                         .padding(start = 10.dp)
                                 )
-
-                                Button(
-                                    onClick = {
-                                        val callIntent = Intent(Intent.ACTION_DIAL)
-                                        callIntent.data = "tel:0741512929".toUri()
-                                        mContext.startActivity(callIntent)
-                                    },
-                                    colors = ButtonDefaults.buttonColors(Color.Red),
-                                    shape = RoundedCornerShape(10.dp),
-                                    modifier = Modifier
-                                        .padding(start = 35.dp, top = 25.dp)
-                                ) {
-                                    Text(text = "Order Now")
-                                }
                             }
                         }
                         //End of row2
