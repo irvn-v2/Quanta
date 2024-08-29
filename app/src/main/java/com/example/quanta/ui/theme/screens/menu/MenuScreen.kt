@@ -68,11 +68,14 @@ import androidx.core.net.toUri
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.quanta.R
+import com.example.quanta.navigation.ROUT_BMW
 import com.example.quanta.navigation.ROUT_CATEGORY
 import com.example.quanta.navigation.ROUT_CRUISER
+import com.example.quanta.navigation.ROUT_DEFENDER
 import com.example.quanta.navigation.ROUT_NOTIFICATION
 import com.example.quanta.navigation.ROUT_PORSCHE
 import com.example.quanta.navigation.ROUT_ROVER
+import com.example.quanta.navigation.ROUT_TESLA
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
@@ -372,6 +375,7 @@ fun MenuScreen(navController: NavController){
                                 modifier = Modifier
                                     .height(200.dp)
                                     .width(200.dp)
+                                    .clickable {navController.navigate(ROUT_TESLA)}
                             ){
                                 Box (
                                     modifier = Modifier
@@ -392,6 +396,7 @@ fun MenuScreen(navController: NavController){
                                 modifier = Modifier
                                     .height(200.dp)
                                     .width(200.dp)
+                                    .clickable {navController.navigate(ROUT_TESLA)}
                                     .verticalScroll(rememberScrollState()),
                                 colors = CardDefaults.cardColors(Color.White)
                             ){
@@ -428,6 +433,7 @@ fun MenuScreen(navController: NavController){
                                 modifier = Modifier
                                     .height(200.dp)
                                     .width(200.dp)
+                                    .clickable {navController.navigate(ROUT_BMW)}
                             ){
                                 Box (
                                     modifier = Modifier
@@ -447,6 +453,7 @@ fun MenuScreen(navController: NavController){
                                 modifier = Modifier
                                     .height(200.dp)
                                     .width(200.dp)
+                                    .clickable {navController.navigate(ROUT_BMW)}
                                     .verticalScroll(rememberScrollState()),
                                 colors = CardDefaults.cardColors(Color.White)
                             ){
@@ -483,6 +490,7 @@ fun MenuScreen(navController: NavController){
                                 modifier = Modifier
                                     .height(200.dp)
                                     .width(200.dp)
+                                    .clickable {navController.navigate(ROUT_DEFENDER)}
                             ){
                                 Box (
                                     modifier = Modifier
@@ -502,6 +510,7 @@ fun MenuScreen(navController: NavController){
                                 modifier = Modifier
                                     .height(200.dp)
                                     .width(200.dp)
+                                    .clickable {navController.navigate(ROUT_DEFENDER)}
                                     .verticalScroll(rememberScrollState()),
                                 colors = CardDefaults.cardColors(Color.White)
                             ) {
