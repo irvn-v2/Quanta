@@ -7,7 +7,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.quanta.ui.theme.screens.bmw.BmwScreen
-import com.example.quanta.ui.theme.screens.category.CategoryScreen
 import com.example.quanta.ui.theme.screens.contact.ContactScreen
 import com.example.quanta.ui.theme.screens.cruiser.CruiserScreen
 import com.example.quanta.ui.theme.screens.defender.DefenderScreen
@@ -53,10 +52,6 @@ fun AppNavHost(
 
         composable(ROUT_LOGIN) {
             LoginScreen(navController = navController)
-        }
-
-        composable(ROUT_CATEGORY) {
-            CategoryScreen(navController = navController)
         }
 
         composable(ROUT_NOTIFICATION) {

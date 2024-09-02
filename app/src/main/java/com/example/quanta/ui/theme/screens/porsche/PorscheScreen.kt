@@ -48,7 +48,6 @@ import androidx.core.net.toUri
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.quanta.R
-import com.example.quanta.navigation.ROUT_CATEGORY
 import com.example.quanta.navigation.ROUT_NOTIFICATION
 import com.example.quanta.ui.theme.screens.menu.bottomNavItems
 
@@ -107,15 +106,6 @@ fun PorscheScreen(navController: NavController){
                         )
                     },
                     colors = TopAppBarDefaults.mediumTopAppBarColors(Color.Red),
-                    navigationIcon = {
-                        IconButton(onClick = {navController.navigate(ROUT_CATEGORY)}) {
-                            Icon(
-                                imageVector = Icons.Default.Menu,
-                                contentDescription = "menu",
-                                tint = Color.White
-                            )
-                        }
-                    },
                     actions = {
                         IconButton(onClick = {navController.navigate(ROUT_NOTIFICATION)}) {
                             Icon(

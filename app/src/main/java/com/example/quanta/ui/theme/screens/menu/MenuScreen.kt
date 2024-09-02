@@ -64,12 +64,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.net.toUri
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.quanta.R
 import com.example.quanta.navigation.ROUT_BMW
-import com.example.quanta.navigation.ROUT_CATEGORY
 import com.example.quanta.navigation.ROUT_CRUISER
 import com.example.quanta.navigation.ROUT_DEFENDER
 import com.example.quanta.navigation.ROUT_NOTIFICATION
@@ -136,15 +134,6 @@ fun MenuScreen(navController: NavController){
                         )
                     },
                     colors = TopAppBarDefaults.mediumTopAppBarColors(Color.Red),
-                    navigationIcon = {
-                        IconButton(onClick = {navController.navigate(ROUT_CATEGORY)}) {
-                            Icon(
-                                imageVector = Icons.Default.Menu,
-                                contentDescription = "menu",
-                                tint = Color.White
-                            )
-                        }
-                    },
                     actions = {
                         IconButton(onClick = {navController.navigate(ROUT_NOTIFICATION)}) {
                             Icon(
