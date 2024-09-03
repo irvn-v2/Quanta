@@ -70,7 +70,7 @@ fun NotificationScreen(navController: NavController){
                                 BadgedBox(
                                     badge = {
                                         if (bottomNavItem.badges != 0) {
-                                            Badge {
+                                            Badge{
                                                 Text(text = bottomNavItem.badges.toString())
                                             }
                                         } else if (bottomNavItem.hasNews) {

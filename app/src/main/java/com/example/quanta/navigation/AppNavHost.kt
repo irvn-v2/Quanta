@@ -15,6 +15,8 @@ import com.example.quanta.ui.theme.screens.login.LoginScreen
 import com.example.quanta.ui.theme.screens.menu.MenuScreen
 import com.example.quanta.ui.theme.screens.notification.NotificationScreen
 import com.example.quanta.ui.theme.screens.porsche.PorscheScreen
+import com.example.quanta.ui.theme.screens.products.AddProductsScreen
+import com.example.quanta.ui.theme.screens.products.ViewProductsScreen
 import com.example.quanta.ui.theme.screens.rover.RoverScreen
 import com.example.quanta.ui.theme.screens.signup.SignupScreen
 import com.example.quanta.ui.theme.screens.splash.SplashScreen
@@ -84,6 +86,13 @@ fun AppNavHost(
 
         composable(ROUT_DEFENDER) {
             DefenderScreen(navController = navController)
+        }
+
+        composable(ADD_PRODUCTS_URL) {
+            AddProductsScreen(navController = navController)
+        }
+        composable(VIEW_PRODUCTS_URL) {
+            ViewProductsScreen(navController = navController)
         }
     }
 

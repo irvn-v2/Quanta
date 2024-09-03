@@ -19,6 +19,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Menu
@@ -27,6 +28,7 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Call
 import androidx.compose.material.icons.outlined.Menu
 import androidx.compose.material.icons.outlined.Person
@@ -557,7 +559,16 @@ val bottomNavItems = listOf(
         route="contact",
         selectedIcon=Icons.Filled.Call,
         unselectedIcon=Icons.Outlined.Call,
-        hasNews = true,
+        hasNews = false,
+        badges=0
+    ),
+
+    BottomNavItem(
+        title = "Add",
+        route="add_products",
+        selectedIcon=Icons.Filled.Add,
+        unselectedIcon=Icons.Outlined.Add,
+        hasNews = false,
         badges=0
     ),
 
