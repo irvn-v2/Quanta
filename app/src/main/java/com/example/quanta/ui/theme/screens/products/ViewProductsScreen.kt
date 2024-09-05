@@ -124,7 +124,7 @@ fun ViewProductsScreen(navController:NavHostController) {
 
             topBar = {
                 TopAppBar(
-                    title = { Text(text = "Available Products",
+                    title = { Text(text = "Available Cars",
                         modifier = Modifier.fillMaxWidth(),
                         textAlign = TextAlign.Center,
                         fontSize = 20.sp,

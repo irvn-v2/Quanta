@@ -22,11 +22,9 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.outlined.Add
-import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Menu
 import androidx.compose.material3.Badge
@@ -163,7 +161,7 @@ fun AddProductsScreen(navController:NavHostController){
                     Spacer(modifier = Modifier.height(130.dp))
 
                     Text(
-                        text = "Upload Here!",
+                        text = "Upload Cars Here!",
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
                         fontFamily = FontFamily.SansSerif)
@@ -179,7 +177,7 @@ fun AddProductsScreen(navController:NavHostController){
                     OutlinedTextField(
                         value = productName,
                         onValueChange = { productName = it },
-                        label = { Text(text = "Product name ") },
+                        label = { Text(text = "Car brand ") },
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
                     )
 
@@ -188,7 +186,7 @@ fun AddProductsScreen(navController:NavHostController){
                     OutlinedTextField(
                         value = productQuantity,
                         onValueChange = { productQuantity = it },
-                        label = { Text(text = "Product quantity e.g 250g ") },
+                        label = { Text(text = "Car type e.g sedan ") },
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
                     )
 
@@ -197,7 +195,7 @@ fun AddProductsScreen(navController:NavHostController){
                     OutlinedTextField(
                         value = productPrice,
                         onValueChange = { productPrice = it },
-                        label = { Text(text = "Product price e.g Ksh.500") },
+                        label = { Text(text = "Car price") },
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
                     )
 
@@ -295,7 +293,7 @@ fun ImagePicker(modifier: Modifier = Modifier, context: Context,navController: N
         }
     )
 
-    Column(modifier = modifier,) {
+    Column(modifier = modifier) {
         if (hasImage && imageUri != null) {
             val bitmap = MediaStore.Images.Media.
             getBitmap(context.contentResolver,imageUri)
@@ -320,7 +318,7 @@ fun ImagePicker(modifier: Modifier = Modifier, context: Context,navController: N
                 colors = ButtonDefaults.buttonColors(Color.Red)
             ) {
                 Text(
-                    text = "Select Image"
+                    text = "Image of the car"
                 )
             }
 
