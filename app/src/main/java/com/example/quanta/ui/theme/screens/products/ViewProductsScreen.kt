@@ -161,7 +161,7 @@ fun ViewProductsScreen(navController:NavHostController) {
 
                     Spacer(modifier = Modifier.height(50.dp))
 
-                    LazyColumn(){
+                    LazyColumn{
                         items(products){
                             ProductItem(
                                 name = it.name,
