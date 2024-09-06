@@ -265,7 +265,7 @@ fun ProductItem(name:String, quantity:String, price:String,phone:String, id:Stri
                                 onClick = {
                                     val smsIntent= Intent(Intent.ACTION_SENDTO)
                                     smsIntent.data="smsto:$phone".toUri()
-                                    smsIntent.putExtra("sms_body","Hello Seller,...?")
+                                    smsIntent.putExtra("sms_body","Hello")
                                     mContext.startActivity(smsIntent)
                                 },
                                 shape = RoundedCornerShape(8.dp),

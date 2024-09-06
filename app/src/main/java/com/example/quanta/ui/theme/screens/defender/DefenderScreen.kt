@@ -14,7 +14,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
@@ -49,7 +48,6 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.quanta.R
 import com.example.quanta.navigation.ROUT_NOTIFICATION
-import com.example.quanta.ui.theme.screens.bmw.BmwScreen
 import com.example.quanta.ui.theme.screens.menu.bottomNavItems
 
 @OptIn(ExperimentalMaterial3Api::class)
